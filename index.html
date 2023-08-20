@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(15, 11, 42);
+      color: white;
+    }
+    .main {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .star-size {
+      height: 50px;
+    }
+  </style>
+  <body>
+    <section class="main">
+      <h1>Hello Javascript</h1>
+      <div style="display: flex">
+        <input id="inp" type="number" placeholder="enter a number" /><button
+          id="val"
+        >
+          Click
+        </button>
+      </div>
+
+      <div style="display: flex">
+        <h3 style="margin-right: 5px">Ratings:</h3>
+        <h3 id="ratings">None</h3>
+      </div>
+      <div id="star-container"></div>
+    </section>
+
+    <!-- Javascript -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
