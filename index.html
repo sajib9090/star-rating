@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
+    <title>Star Ratings</title>
   </head>
   <style>
     body {
@@ -13,36 +12,55 @@
     }
     .main {
       width: 100%;
-      height: 100vh;
+      min-height: 80vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
     }
     .star-size {
-      height: 50px;
+      height: 30px;
+    }
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      margin: 0 auto;
+    }
+    .product {
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.218);
+      width: 280px;
+    }
+    .img-size {
+      width: 100%;
+      height: 200px;
+    }
+    .content {
+      padding: 20px;
     }
   </style>
   <body>
     <section class="main">
-      <h1>Hello Javascript</h1>
-      <div style="display: flex">
-        <input id="inp" type="number" placeholder="enter a number" /><button
-          id="val"
-        >
-          Click
-        </button>
+      <h1>Hello Star Ratings</h1>
+      <div>
+        <input type="number" name="" id="inp" placeholder="enter value" />
+        <button id="val">Render</button>
       </div>
-
-      <div style="display: flex">
-        <h3 style="margin-right: 5px">Ratings:</h3>
-        <h3 id="ratings">None</h3>
+      <div>
+        <h3>Ratings: <span id="rating-value"></span></h3>
       </div>
       <div id="star-container"></div>
     </section>
-
-    <!-- Javascript -->
-
+    <section>
+      <h1 style="text-align: center">Products</h1>
+      <div>
+        <div style="text-align: center; margin: 20px 0">
+          <button id="renderProducts">Render Products</button>
+        </div>
+        <div id="product-container" class="product-container"></div>
+      </div>
+    </section>
     <script src="index.js"></script>
   </body>
 </html>
